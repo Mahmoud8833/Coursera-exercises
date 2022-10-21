@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .row-header {
     margin: 0px auto;
     padding: 0px;
