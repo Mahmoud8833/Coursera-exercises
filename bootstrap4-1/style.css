@@ -49,3 +49,7 @@ body {
     padding: 10px;
     border-radius: 0 0 0.5rem 0.5rem;
 }
+
+.navbar-text {
+    cursor: pointer;
+}
