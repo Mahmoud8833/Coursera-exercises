@@ -32,8 +32,13 @@
               Contact
               Us</a></li>
         </ul>
-        <span class="navbar-text">
+        <!-- <span class="navbar-text">
           <a data-toggle="modal" data-target="#loginModal">
+            <span class="fa fa-sign-in"></span> Login
+          </a>
+        </span> -->
+        <span class="navbar-text" id="modalLogin">
+          <a href="#loginModal">
             <span class="fa fa-sign-in"></span> Login
           </a>
         </span>
@@ -46,7 +51,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">Reserve a Table</h4>
-          <button class="close" type="button" data-dismiss="modal">
+          <button class="close times" type="button" data-dismiss="modal">
             &times;
           </button>
         </div>
@@ -122,8 +127,8 @@
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">Login</h4>
-          <button class="close" type="button" data-dismiss="modal">
-            &times;
+          <button class="close" data-dismiss="modal">
+            <span class="times">x</span>
           </button>
         </div>
         <div class="modal-body">
@@ -147,12 +152,10 @@
                 </div>
               </div>
             </div>
-        </div>
-        <div class="modal-footer">
-          <div class="form-row">
-            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
-          </div>
+            <div class="form-row">
+              <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+            </div>
           </form>
         </div>
       </div>
@@ -176,7 +179,7 @@
           <!-- <a href="#reserve" class="btn btn-block nav-link btn-warning" data-toggle="tooltip" data-html="true"
             title="Or Call Us at<br> +123 123456798" data-placement="bottom">Reserve Table</a> -->
 
-          <a data-toggle="modal" data-target="#reservemodal" class="btn btn-block nav-link btn-warning">Reserve
+          <a id="modalReserve" href="#reservemodal" class="btn btn-block nav-link btn-warning">Reserve
             Table</a>
         </div>
       </div>
@@ -432,6 +435,7 @@
     //   });
     // })
 
+    // For carousel button
     $(document).ready(() => {
       $('#mycarousel').carousel({ interval: 3000 });
       $('#carouselButton').click(() => {
@@ -446,6 +450,19 @@
         }
       })
     })
+
+    $(document).ready(() => {
+      $('#modalLogin').click(() => {
+        $('#loginModal').modal('show')
+      })
+    })
+
+    $(document).ready(() => {
+      $('#modalReserve').click(() => {
+        $('#reservemodal').modal('show')
+      })
+    })
+
   </script>
 </body>
 
