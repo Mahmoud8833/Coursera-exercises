@@ -9,7 +9,12 @@
     "lite": "lite-server",
     "scss": "node-sass -o css/ css/",
     "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
-    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\"",
+    "clean": "rimraf dist",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "imagemin": "imagemin img/* --out-dir dist/img",
+    "usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin index.html -d dist --htmlmin -o dist/index.html ",
+    "build": "npm run clean && npm run copyfonts && npm run imagemin && npm run usemin"
   },
   "repository": {
     "type": "git",
@@ -26,10 +31,15 @@
   },
   "homepage": "https://github.com/Mahmoud8833/Coursera-exercises#readme",
   "devDependencies": {
+    "cssmin": "^0.4.3",
+    "htmlmin": "^0.0.7",
     "lite-server": "^2.6.1",
     "onchange": "^3.3.0",
     "parallelshell": "^3.0.1",
-    "sass": "^1.55.0"
+    "rimraf": "^2.6.2",
+    "sass": "^1.55.0",
+    "uglifyjs": "^2.4.11",
+    "usemin-cli": "^0.5.1"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",

@@ -15,9 +15,9 @@
     // })
 
     // For carousel button
-    $(document).ready(() => {
+    $(function() {
       $('#mycarousel').carousel({ interval: 3000 });
-      $('#carouselButton').click(() => {
+      $('#carouselButton').on("click", function(){
         if ($('#carouselButton').children('span').hasClass('fa-pause')) {
           $('#mycarousel').carousel('pause');
           $('#carouselButton').children('span').removeClass('fa-pause');
@@ -30,14 +30,14 @@
       })
     })
 
-    $(document).ready(() => {
-      $('#modalLogin').click(() => {
+    $(function() { 
+      $('#modalLogin').on("click", function() {
         $('#loginModal').modal('show')
       })
     })
 
-    $(document).ready(() => {
-      $('#modalReserve').click(() => {
+    $(function()  {
+      $('#modalReserve').on("click", function() {
         $('#reservemodal').modal('show')
       })
     })
