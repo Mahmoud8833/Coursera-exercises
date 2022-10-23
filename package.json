@@ -2,12 +2,14 @@
   "name": "coursera-exercises",
   "version": "1.0.0",
   "description": "This is my training files and folders in this course",
-  "main": "index.html",
+  "main": "./index.html",
   "scripts": {
-    "start": "npm run lite",
+    "start": "npm run watch:all",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite": "lite-server",
-    "scss": "node-sass -o bootstrap4-1/css/ bootstrap4-1/css/"
+    "scss": "node-sass -o css/ css/",
+    "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,8 @@
   "homepage": "https://github.com/Mahmoud8833/Coursera-exercises#readme",
   "devDependencies": {
     "lite-server": "^2.6.1",
+    "onchange": "^3.3.0",
+    "parallelshell": "^3.0.1",
     "sass": "^1.55.0"
   },
   "dependencies": {
