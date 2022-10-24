@@ -31,22 +31,36 @@
   },
   "homepage": "https://github.com/Mahmoud8833/Coursera-exercises#readme",
   "devDependencies": {
+    "browser-sync": "^2.27.10",
     "cssmin": "^0.4.3",
+    "grunt": "^1.0.2",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-cli": "^1.4.3",
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^3.1.0",
+    "grunt-spritesmith": "^6.10.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
     "htmlmin": "^0.0.7",
+    "jit-grunt": "^0.10.0",
     "lite-server": "^2.6.1",
+    "load-grunt-config": "^4.0.1",
+    "node-sass": "^7.0.3",
     "onchange": "^7.1.0",
     "parallelshell": "^3.0.1",
     "rimraf": "^2.6.2",
     "sass": "^1.55.0",
+    "time-grunt": "^2.0.0",
     "uglifyjs": "^2.4.11",
-    "usemin-cli": "^0.5.1"
+    "usemin-cli": "^0.6.0"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
     "bootstrap-social": "^5.1.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.5.0",
-    "node-sass": "^7.0.3",
     "popper.js": "^1.12.9"
   }
 }
