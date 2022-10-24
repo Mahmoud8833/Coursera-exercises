@@ -1,1 +1,2 @@
-# Coursera-exercises
+# Coursera-exercises\
+Training files and folders for Coursera course
